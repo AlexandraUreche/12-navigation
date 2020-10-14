@@ -1,4 +1,6 @@
 'use strict'
+
+
 document.addEventListener("DOMContentLoaded", function(event) {
     const menuItems = document.getElementsByClassName("menu-item");
     const imgItems=document.getElementsByClassName("img-item");
