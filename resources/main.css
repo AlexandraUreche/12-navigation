@@ -11,12 +11,19 @@ html, body{
     width: 100%;
     height: 100%;
    
-}.principal-wrapper{
-    height: 95%;
+}
+.principal-wrapper, .menu-wrapper, ul,
+.additional-menu,.account-container, .account-container form, 
+.reward-container .activity-wrapper, .activity-wrapper div, .benefits-wrapper,
+.credentiales-wrapper div, .addresses-inputs, .addresses-inputs div,
+.payment-container, .cards-wrapper, .card-section:last-child{
     display: flex;
+}
+.principal-wrapper{
+    height: 95%;
     font-size: 15px;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 .banner-wrapper{
     height: 5%;
@@ -39,33 +46,53 @@ section{
     background-color: rgb(248,244,241);
 }
 .textlogo-wrapper{
-    text-transform: uppercase;
-    padding: 6px 10px;
-    font-weight: 600;
+    width: 60%;
+    height: 20px;
+    margin: 10px 30px;
+}
+.textlogo-wrapper img{
+    width: 100%;
+    height: auto;
 }
 .logo-wrapper{
-    width: 110px;
-    height: 110px;
-    margin: 0 auto;
+    width: 140px;
+    height: 140px;
+}
+.additional-menu{
+    margin: 10px 30px;
+    justify-content: flex-end;
+    text-align: end;
+}
+.additional-menu a:last-child{
+    margin-right: 0;
+}
+.additional-menu a {
+   width: 50px;
+   height: 20px;
+   margin-right:25px;
 }
 
-.logo-wrapper img{
+.logo-wrapper img, .additional-menu img{
     width: auto;
     height: 100%;
 }
+.menu-wrapper, .account-container form, 
+ul, .card-section:last-child,
+.addresses-inputs div, .activity-wrapper div,
+.account-container,.payment-container
+{
+    flex-direction: column;
+}
 .menu-wrapper{
     padding-top:70px;
+    align-items: center;
 }
 ul {
     margin: 0;
     padding: 0;
     list-style-type: none;
-    display: flex;
-    flex-direction: column;
 }
-ul li{
-    text-align: center;
-}
+
 ul li:first-child{
     padding: 30px 6px 5px 6px;
 }
@@ -77,7 +104,6 @@ ul li:nth-child(n+2) {
 
 ul a {
     text-decoration: none;
-    font-weight: 700;
     cursor: pointer;
 }
 
@@ -114,7 +140,111 @@ section {
     z-index: 1;
 }
 
-
 .hidden {
     display: none;
+}
+.title-wrapper{
+    font-size: 25px;
+    width: 100px;
+}
+.title-wrapper h2{
+    font-size: 18px;
+}
+.reward-container, .account-container,.payment-container{
+    padding: 30px 0 0 50px;
+    justify-content:center;
+}
+
+form{
+    width: 100%;
+}
+.credentiales-wrapper input, 
+.addresses-inputs div,
+.registration-wrapper button
+{
+    margin: 0 15px 15px 0;
+    width: 300px;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.addresses-inputs div{
+    border-radius: 15px;
+    height: 160px;
+    padding: 15px;
+    margin-bottom: 0px;
+}
+.registration-wrapper button, .addresses-inputs div{
+    background-color:black;
+    color: #fff;
+}
+.credentiales-wrapper input{
+    background-color: rgb(248,244,241);
+    color: black;
+    padding: 15px;
+   
+}
+
+.input-validation:required:invalid
+ {
+     background: transparent;
+    
+ }
+
+.input-validation:disabled {
+    background: transparent;
+}
+.activity-wrapper, .activity-wrapper div,
+.benefits-wrapper{
+    justify-content: space-between;
+}
+.activity-wrapper{
+    height: 50%;  
+    margin-bottom: 40px;
+}
+
+.benefits-wrapper div:first-child{
+    padding-top: 5px;
+}
+
+.benefits-wrapper .benefits-image-wrapper{
+    width: 50px;
+    height: 50px;
+}
+.activity-wrapper h2, .activity-wrapper span,
+.benefits-wrapper h2{
+    font-size: 13px;
+}
+.activity-wrapper{
+    width: 50%;
+}
+.benefits-wrapper{
+    width: 40%;
+}
+.cards-wrapper{
+    flex-flow: wrap;
+    max-width: 650px;
+    
+}
+.card-section{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+}
+.card-section img,
+.card-section:last-child .img-wrapper img, 
+.benefits-image-wrapper img{
+    width: auto;
+    height: 100%;
+}
+.card-section:last-child{
+    background-color: rgb(242,237,233);
+    justify-content: center;
+    align-items: center;
+}
+.card-section:last-child .img-wrapper{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+   
 }
