@@ -15,11 +15,17 @@ html, body{
    
 }
 
-.principal-wrapper, .menu-wrapper, ul,
+.principal-wrapper, .menu-wrapper, ul,.orders-container, .order-wrapper,
+.details-order, .details-order div, .order-details-wrapper,
+.more-products-order div, .reward-container,
 .additional-menu,.account-container, .account-container form, 
-.reward-container .activity-wrapper, .activity-wrapper div, .benefits-wrapper,
-.credentiales-wrapper div, .addresses-inputs, .addresses-inputs div,
-.payment-container, .cards-wrapper, .card-section:last-child{
+.reward-container .activity-wrapper, .activity-wrapper div, 
+.benefits-wrapper,.credentiales-wrapper div, .addresses-inputs,
+.addresses-inputs div,.payment-container, .cards-wrapper, 
+.card-section:last-child, .order-details-wrapper .title-wrapper,
+.order-details-wrapper .title-wrapper div:nth-child(2),
+.more-products-order div,.order-wrapper .image-product,.biling-wrapper, .shipping-wrapper, 
+.order-details-content .address{
     display: flex;
 }
 
@@ -68,13 +74,14 @@ section{
     justify-content: flex-end;
     text-align: end;
 }
+.additional-menu a {
+    width: 50px;
+    height: 20px;
+    margin-right:25px;
+ }
+ 
 .additional-menu a:last-child{
     margin-right: 0;
-}
-.additional-menu a {
-   width: 50px;
-   height: 20px;
-   margin-right:25px;
 }
 
 .logo-wrapper img, .additional-menu img{
@@ -82,15 +89,21 @@ section{
     height: 100%;
 }
 .menu-wrapper, .account-container form, 
-ul, .card-section:last-child,
+ul, .card-section:last-child, 
+.orders-container,.details-order, .order-status div,
+.order-details-wrapper,
+.additional-products-ordered,
+.reward-container, .more-products-order div:last-child,
+.details-order .order-id, .details-order .order-total,
 .addresses-inputs div, .activity-wrapper div,
-.account-container,.payment-container
+.account-container,.payment-container,
+.order-details-content .address,
+.order-wrapper .image-product
 {
     flex-direction: column;
 }
 .menu-wrapper{
     padding-top:70px;
-    align-items: center;
 }
 ul {
     margin: 0;
@@ -107,7 +120,7 @@ ul li:nth-child(n+2) {
    
 }
 
-ul a {
+ul a, #seeOrderDetailsBtn a {
     text-decoration: none;
     cursor: pointer;
 }
@@ -117,6 +130,7 @@ section {
 }
 
 .orders-container,
+.order-details-wrapper,
 .reward-container,
 .account-container,
 .payment-container {
@@ -127,6 +141,8 @@ section {
     bottom: 0;
     left: 0;
     right: 0;
+    padding: 30px 0 0 50px;
+    justify-content:center;
     
 }
 
@@ -135,6 +151,10 @@ nav li a.selected{
 }
 .orders-container, img[alt~="vip"] {
     z-index: 4;
+}
+
+.order-details{
+    z-index: 5;
 }
 .reward-container, img[alt~="gold"] {
     z-index: 3;
@@ -151,23 +171,22 @@ nav li a.selected{
 .hidden {
     display: none;
 }
-.title-wrapper{
+.title-wrapper, 
+.order-details-wrapper .title-wrapper div{
     font-size: 25px;
+    width: 150px;
+}
+.order-details-wrapper .title-wrapper div:nth-child(2){
     width: 100px;
 }
 .title-wrapper h2{
     font-size: 18px;
 }
-.reward-container, .account-container,.payment-container{
-    padding: 30px 0 0 50px;
-    justify-content:center;
-}
-
 form{
     width: 100%;
 }
 .credentiales-wrapper input, 
-.addresses-inputs div,
+form .addresses-inputs div,
 .registration-wrapper button
 {
     margin: 0 15px 15px 0;
@@ -176,13 +195,13 @@ form{
     font-size: 18px;
     font-weight: 600;
 }
-.addresses-inputs div{
+form .addresses-inputs div{
     border-radius: 15px;
     height: 160px;
     padding: 15px;
     margin-bottom: 0px;
 }
-.registration-wrapper button, .addresses-inputs div{
+.registration-wrapper button, form .addresses-inputs div{
     background-color:black;
     color: #fff;
 }
@@ -202,8 +221,73 @@ form{
 .input-validation:disabled {
     background: transparent;
 }
-.activity-wrapper, .activity-wrapper div,
-.benefits-wrapper{
+
+
+.order-wrapper .image-product,
+.order-wrapper .details-order{
+    height: 400px;
+}
+
+.order-wrapper .image-product{
+    width: 30%;
+    background-color: rgb(242,237,233);
+    justify-content: center;
+}
+.order-wrapper .image-product img{
+    width: 100%;
+    height: auto;
+}
+.order-wrapper .details-order{
+    width: 70%;
+    padding-left:20px;
+}
+.details-order span:first-child, 
+.order-status div:nth-child(2),
+.order-details-wrapper, 
+.order-details-wrapper .title-wrapper span{
+    font-size: 11px;
+}
+
+.details-order span:first-child, 
+.order-status div:nth-child(2){
+    padding-bottom: 5px;
+}
+.order-status div:last-child span:first-child{
+    text-align: end;
+}
+.order-status, .more-products-order,
+.order-details-wrapper{
+    width: 60%;
+}
+
+.more-products-order div{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(242,237,233);
+    justify-content: center;
+}
+.more-products-order img{
+    width: auto;
+    height: 100%;
+}
+.more-products-order div:last-child,
+.card-section:last-child,
+.menu-wrapper{
+    align-items: center;
+}
+
+.more-products-order div:last-child div{
+   width: unset;
+   height: unset;
+}
+.details-order,
+.order-status,
+.activity-wrapper, 
+.activity-wrapper div,
+.benefits-wrapper,
+.biling-wrapper, .shipping-wrapper,
+.more-products-order, .order-details-wrapper .title-wrapper,
+.biling-wrapper, .shipping-wrapper{
     justify-content: space-between;
 }
 .activity-wrapper{
@@ -248,11 +332,30 @@ form{
 .card-section:last-child{
     background-color: rgb(242,237,233);
     justify-content: center;
-    align-items: center;
 }
 .card-section:last-child .img-wrapper{
     width: 50px;
     height: 50px;
     margin-bottom: 10px;
    
+}
+
+.order-details-wrapper{
+    justify-content: space-around;
+}
+.order-details-wrapper .title-wrapper div:nth-child(2){
+    align-items: flex-end;
+}
+.order-details-wrapper h2,
+.order-details-wrapper h1{
+    margin: 0;
+}
+.order-details-wrapper .title-wrapper {
+    width: 100%;
+}
+.order-details-content .left-column{
+    width: 85px;
+}
+.biling-wrapper, .shipping-wrapper{
+    height: 200px;
 }

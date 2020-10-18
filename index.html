@@ -51,9 +51,105 @@
                     <a class="exit"><img alt="exit icon" src="assets/icon-exit-3.png" /></a>
                 </nav>
                 <div class="container">
-                    <div class="content orders-container hidden">
-                        <p>your orders</p>
+                    <div class="content orders-container hidden" id="yourOrders">
+                        <div class="title-wrapper">
+                            <h1>Your orders</h1>
+                        </div>
+                        <div class="order-wrapper">
+                            <div class="image-product">
+                                <img alt="product" src="assets/product-1/product.png" />
+                            </div>
+                            <div class="details-order">
+                                <div class="order-status">
+                                    <div>
+                                        <span>April 1, 2019</span>
+                                        <span>Processing</span>
+                                    </div>
+                                    <div>
+                                        <span id="seeOrderDetailsBtn">
+                                            <nav><a>Order details</a></nav>
+                                        </span>
+                                        <span>Cancel / Modify</span>
+                                    </div>
+                                </div>
+                                <div class="order-id">
+                                    <span>Order #</span>
+                                    <span>30004</span>
+                                </div>
+                                <div class="order-total">
+                                    <span>Order Total</span>
+                                    <span>$324.96</span>
+                                </div>
+                                <div class="additional-products-ordered">
+                                    <span>Also more in this order</span>
+                                    <div class="more-products-order">
+                                        <div>
+                                            <img alt="addition-1" src="assets/product-1/addition-1.png" />
+                                        </div>
+                                        <div>
+                                            <img alt="addition-3" src="assets/product-1/addition-3.png" />
+                                        </div>
+                                        <div>
+                                            <img alt="addition-4" src="assets/product-1/addition-4.png" />
+                                        </div>
+                                        <div>
+                                            <div>+3</div>
+                                            <div>more</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="content order-details-wrapper hidden" id="orderDetails">
+                        <div class="title-wrapper">
+                            <div>
+                                <span>Your Orders/Order #30002</span>
+                                <h1>Order details</h1> 
+                            </div>
+                           <div><h2>Order Cancelled</h2></div>
+                        </div>
+                        <div class="order-details-content">
+                            <div class="biling-wrapper">
+                                <div class="left-column">
+                                    <h2>Biling</h2>
+                                </div>
+                                <div class="middle-column">
+                                    <div class="address">
+                                        <span>Rally Interactive</span>
+                                        <span>244 W 300 N</span>
+                                        <span>Salt Lake City, Utah B4103</span>
+                                        <span>Unites States</span>
+                                        <span>(801) 643-3595</span>
+                                    </div>
+                                </div>
+                                <div class="right-column">
+                                        <div>Payment Status:</div>
+                                        <div>Refunded</div>
+                                </div>
+                            </div>
+                            <div class="shipping-wrapper">
+                                <div class="left-column">
+                                    <h2>Shipping</h2>
+                                </div>
+                                <div class="middle-column">
+                                    <div class="address">
+                                        <span>Rally Interactive</span>
+                                        <span>244 W 300 N</span>
+                                        <span>Salt Lake City, Utah B4103</span>
+                                        <span>Unites States</span>
+                                        <span>(801) 643-3595</span>
+                                    </div>
+                                </div>
+                                <div class="right-column">
+                                        <div>Payment Status:</div>
+                                        <div>Refunded</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="content reward-container hidden">
                         <div class="title-wrapper">
                             <h1>Reward Status</h1>
@@ -105,7 +201,6 @@
 
                         </div>
                     </div>
-
 
                     <div class="content account-container hidden">
                         <div class="title-wrapper">

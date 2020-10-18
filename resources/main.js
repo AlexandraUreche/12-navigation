@@ -3,11 +3,13 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     const menuItems = document.getElementsByClassName("menu-item");
     const imgItems=document.getElementsByClassName("img-item");
-    for (let i = 0; i < menuItems.length; i++) {
+    const orderDetails=document.getElementById("orderDetails");
+    for (let i = 0; i < menuItems.length-1; i++) {
         const menuItem = menuItems[i];
         const imgItem=imgItems[i];
+        orderDetails.classList.add("hidden");
         menuItem.addEventListener('click', function() {
-            for(let j = 0; j < menuItems.length; j++) {
+            for(let j = 0; j < menuItems.length-1; j++) {
                 if(menuItems[j].classList.contains('selected')){
                     menuItems[j].classList.remove("selected");
                 } else {
@@ -30,6 +32,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 imgItem.classList.remove("hidden");
             }
         });
-
     }
+    const seeOrderDetailsBtn=document.getElementById("seeOrderDetailsBtn");
+    const yourOrders=document.getElementById("yourOrders");
+    seeOrderDetailsBtn.addEventListener('click', function(){
+        if(orderDetails.classList.contains("hidden")){
+            orderDetails.classList.remove("hidden");
+            yourOrders.classList.add("hidden");
+        }
+        
+    });
+    
 });
