@@ -49,14 +49,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
         //console.log("saved");
     });
 
+    // incearca sa fii consistente la denumiri, ori toate sa inceapa cu litera mica ori toate cu litera mare
     const ProductOrderImage=document.getElementById("ProductOrderImage");
     const getImagesContainer=document.getElementById("imageContainer");
+    // ai foarte multe imagini in proiect, iti recomand un alt selector aici
     const imagesItems=getImagesContainer.getElementsByTagName("img");
     for (let i = 0; i < imagesItems.length; i++) {
         const addImgItem = imagesItems[i];
         let counter=i+1;
         addImgItem.addEventListener('click', function() {
-            //console.log("click");
+            console.log("click");
             ProductOrderImage.setAttribute('src', "assets/product-1/addition-"+counter+".png");
             addImgItem.setAttribute('src', "assets/product-1/product.png");
 
