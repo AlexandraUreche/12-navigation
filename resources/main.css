@@ -168,9 +168,7 @@ nav li a.selected{
     z-index: 1;
 }
 
-.hidden {
-    display: none;
-}
+
 .title-wrapper, 
 .order-details-wrapper .title-wrapper div{
     font-size: 25px;
@@ -229,7 +227,7 @@ form .addresses-inputs div{
 }
 
 .order-wrapper .image-product{
-    width: 30%;
+    width: 350px;
     background-color: rgb(242,237,233);
     justify-content: center;
 }
@@ -358,4 +356,8 @@ form .addresses-inputs div{
 }
 .biling-wrapper, .shipping-wrapper{
     height: 200px;
+}
+
+.hidden {
+    display: none;
 }

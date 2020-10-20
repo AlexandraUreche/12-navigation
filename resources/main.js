@@ -42,5 +42,26 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }
         
     });
-    
+
+    const myAccountForm=document.getElementsByName("myAccountForm")[0];
+    myAccountForm.addEventListener('submit', function(e){
+        e.preventDefault();
+        //console.log("saved");
+    });
+
+    const ProductOrderImage=document.getElementById("ProductOrderImage");
+    const getImagesContainer=document.getElementById("imageContainer");
+    const imagesItems=getImagesContainer.getElementsByTagName("img");
+    for (let i = 0; i < imagesItems.length; i++) {
+        const addImgItem = imagesItems[i];
+        let counter=i+1;
+        addImgItem.addEventListener('click', function() {
+            //console.log("click");
+            ProductOrderImage.setAttribute('src', "assets/product-1/addition-"+counter+".png");
+            addImgItem.setAttribute('src', "assets/product-1/product.png");
+
+        });
+    }
+
+
 });
