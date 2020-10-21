@@ -15,7 +15,7 @@ html, body{
    
 }
 
-.principal-wrapper, .menu-wrapper, ul,.orders-container, .order-wrapper,
+.banner-wrapper, .principal-wrapper, .menu-wrapper, ul,.orders-container, .order-wrapper,
 .details-order, .details-order div, .order-details-wrapper,
 .more-products-order div, .reward-container,
 .additional-menu,.account-container, .account-container form, 
@@ -225,11 +225,15 @@ form .addresses-inputs div{
 .order-wrapper .details-order{
     height: 400px;
 }
+.banner-wrapper, .order-wrapper .image-product,
+.card-section:last-child, .more-products-order div{
+    justify-content: center;
+}
 
 .order-wrapper .image-product{
     width: 350px;
     background-color: rgb(242,237,233);
-    justify-content: center;
+    
 }
 .order-wrapper .image-product img{
     width: 100%;
@@ -262,13 +266,12 @@ form .addresses-inputs div{
     width: 80px;
     height: 80px;
     background-color: rgb(242,237,233);
-    justify-content: center;
 }
 .more-products-order img{
     width: auto;
     height: 100%;
 }
-.more-products-order div:last-child,
+.banner-wrapper, .more-products-order div:last-child,
 .card-section:last-child,
 .menu-wrapper{
     align-items: center;
@@ -329,7 +332,6 @@ form .addresses-inputs div{
 }
 .card-section:last-child{
     background-color: rgb(242,237,233);
-    justify-content: center;
 }
 .card-section:last-child .img-wrapper{
     width: 50px;
