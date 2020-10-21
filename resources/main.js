@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     const menuItems = document.getElementsByClassName("menu-item");
     const imgItems=document.getElementsByClassName("img-item");
     const orderDetails=document.getElementById("orderDetails");
+    const seeAdditionalMenu=document.getElementsByClassName("additional-menu")[0];
     for (let i = 0; i < menuItems.length-1; i++) {
         const menuItem = menuItems[i];
         const imgItem=imgItems[i];
@@ -25,9 +26,16 @@ document.addEventListener("DOMContentLoaded", function(event) {
                     continue;
                 } else {
                     contentElements[k].classList.add("hidden");
+                    
                 }
             }
             document.getElementsByClassName(dataContent)[0].classList.remove("hidden");
+            if(document.getElementsByClassName(dataContent)[0].classList.contains("orders-container")) {
+                seeAdditionalMenu.classList.add("hidden");
+            } else {
+                    seeAdditionalMenu.classList.remove("hidden");
+                }
+            
             if(imgItem.classList.contains("selected")){
                 imgItem.classList.remove("hidden");
             }
@@ -39,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if(orderDetails.classList.contains("hidden")){
             orderDetails.classList.remove("hidden");
             yourOrders.classList.add("hidden");
+            seeAdditionalMenu.classList.remove("hidden");
         }
         
     });
@@ -50,19 +59,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
 
     // incearca sa fii consistente la denumiri, ori toate sa inceapa cu litera mica ori toate cu litera mare
-    const ProductOrderImage=document.getElementById("ProductOrderImage");
+    let getProductOrderImage=document.getElementById("ProductOrderImage");
+    let setProductImageCopy=getProductOrderImage.src;
     const getImagesContainer=document.getElementById("imageContainer");
     // ai foarte multe imagini in proiect, iti recomand un alt selector aici
-    const imagesItems=getImagesContainer.getElementsByTagName("img");
+    const imagesItems=getImagesContainer.getElementsByTagName("img");//aici am luat doar img-urile de pe nodul: imageContainer, nu pe toate
     for (let i = 0; i < imagesItems.length; i++) {
         const addImgItem = imagesItems[i];
-        let counter=i+1;
         addImgItem.addEventListener('click', function() {
-            console.log("click");
-            ProductOrderImage.setAttribute('src', "assets/product-1/addition-"+counter+".png");
-            addImgItem.setAttribute('src', "assets/product-1/product.png");
-
+            getProductOrderImage.setAttribute('src', addImgItem.src);
+            addImgItem.setAttribute('src', setProductImageCopy);
+            setProductImageCopy= getProductOrderImage.src;
         });
+       
     }
 
 
