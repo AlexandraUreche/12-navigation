@@ -11,6 +11,7 @@ $(function () {
         imgLogos.addClass('hidden');
         $(this).addClass('selected');
         var pageClass=$(this).attr('data-content');
+        $('.additional-menu').removeClass('hidden');
         $('.'+pageClass).removeClass('hidden');
         $('img[data-content='+pageClass+']').removeClass('hidden');
         if($('.'+pageClass).hasClass('orders-container')){
