@@ -364,7 +364,8 @@ form .addresses-inputs div{
     height: 200px;
 }
 
-.hidden {
+.hidden,#overlay,
+#overlayContent {
     display: none;
 }
 
@@ -376,9 +377,7 @@ form .addresses-inputs div{
     left: 0px; 
     background-color: #000; 
     opacity: 0.7;
-    filter: alpha(opacity = 70) !important;
-    display: none;
-    z-index: 100;
+    z-index: 7;
 
 }
 
@@ -386,9 +385,8 @@ form .addresses-inputs div{
     position: fixed; 
     width: 100%;
     top: 100px;
-    display: none;
     overflow: hidden;
-    z-index: 100;
+    z-index: 7;
 }
 #imgBig{
     width: 550px;
