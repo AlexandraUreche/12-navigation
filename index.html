@@ -12,6 +12,8 @@
         rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="resources/main.css">
     <script src="bundles/jquery/jquery-3.5.1.min.js"></script>
+
+
 </head>
 
 <body>
@@ -52,6 +54,10 @@
                     <a class="exit"><img alt="exit icon" src="assets/icon-exit-3.png" /></a>
                 </nav>
                 <div class="container">
+                    <div id="overlay"></div>
+                    <div id="overlayContent">
+                        <img id="imgBig" src="" alt=""/>
+                    </div>
                     <div class="content orders-container hidden" id="yourOrders">
                         <div class="title-wrapper">
                             <h1>Your orders</h1>
@@ -107,9 +113,11 @@
                         <div class="title-wrapper">
                             <div>
                                 <span>Your Orders/Order #30002</span>
-                                <h1>Order details</h1> 
+                                <h1>Order details</h1>
                             </div>
-                           <div><h2>Order Cancelled</h2></div>
+                            <div>
+                                <h2>Order Cancelled</h2>
+                            </div>
                         </div>
                         <div class="order-details-content">
                             <div class="biling-wrapper">
@@ -126,8 +134,8 @@
                                     </div>
                                 </div>
                                 <div class="right-column">
-                                        <div>Payment Status:</div>
-                                        <div>Refunded</div>
+                                    <div>Payment Status:</div>
+                                    <div>Refunded</div>
                                 </div>
                             </div>
                             <div class="shipping-wrapper">
@@ -144,8 +152,8 @@
                                     </div>
                                 </div>
                                 <div class="right-column">
-                                        <div>Payment Status:</div>
-                                        <div>Refunded</div>
+                                    <div>Payment Status:</div>
+                                    <div>Refunded</div>
                                 </div>
                             </div>
                         </div>

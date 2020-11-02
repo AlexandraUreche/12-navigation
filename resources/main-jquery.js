@@ -31,8 +31,19 @@ $(function () {
        $(this).attr('src', imageOrderClone);
         
     });
-
     $('form').on('submit', function(e) {
         e.preventDefault();
+    });
+
+    $("#ProductOrderImage").click(function(){
+        $("#imgBig").attr("src",$(this).attr('src'));
+        $("#overlay").show();
+        $("#overlayContent").show();
+    });
+    
+    $("#imgBig").click(function(){
+        $("#imgBig").attr("src", "");
+        $("#overlay").hide();
+        $("#overlayContent").hide();
     });
 });
