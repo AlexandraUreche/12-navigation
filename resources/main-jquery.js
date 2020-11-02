@@ -23,6 +23,15 @@ $(function () {
         $('.orders-container').addClass('hidden');
     });
 
+    const additionalImages=$('.more-products-order').find('img');
+    additionalImages.click(function(){
+       let imageOrder=$('.image-product').find('img');
+       let imageOrderClone=imageOrder.attr('src');
+       imageOrder.attr('src',$(this).attr('src'));
+       $(this).attr('src', imageOrderClone);
+        
+    });
+
     $('form').on('submit', function(e) {
         e.preventDefault();
     });
